@@ -339,8 +339,8 @@
           <div class="hstat-l">Evaluation layers, with every tool checked the same way every time.</div>
         </div>
         <div class="hstat fade" style="transition-delay:0.19s">
-          <div class="hstat-n" aria-label="2 Published">2<span class="hstat-unit">Published</span></div>
-          <div class="hstat-l">NotebookLM and MagicSchool AI audits completed, with Wayground in progress.</div>
+          <div class="hstat-n" aria-label="3 Published">3<span class="hstat-unit">Published</span></div>
+          <div class="hstat-l">NotebookLM, MagicSchool AI, and Wayground evaluations completed.</div>
         </div>
         <div class="hstat fade" style="transition-delay:0.26s">
           <div class="hstat-n">2</div>
@@ -552,21 +552,33 @@
         </div>
       </div>
 
-      <div class="audit-card pending fade" style="transition-delay:0.2s">
-        <div class="audit-status"><span class="dot dot-yellow"></span> In Progress</div>
+      <div class="audit-card fade" style="transition-delay:0.2s">
+        <div class="audit-status"><span class="dot dot-green"></span> Published</div>
         <div class="audit-name">Wayground</div>
-        <div class="audit-sub">AI EdTech Platform, Audit 3</div>
-        <div class="audit-wrong">
-          <div class="audit-wrong-label">Status</div>
-          <div class="audit-wrong-text">In progress</div>
+        <div class="audit-sub">AI EdTech Platform, Standards Alignment Feature</div>
+        <div class="audit-field">
+          <div class="audit-field-label">Primary failure</div>
+          <div class="audit-field-value">False Grounding / D3a Citation Fabrication</div>
         </div>
         <div class="audit-field">
-          <div class="audit-field-label">Expected finding type</div>
-          <div class="audit-field-value">Full five-layer evaluation with CRI scoring and adoption recommendation.</div>
+          <div class="audit-field-label">Risk Profile</div>
+          <div class="audit-field-value">Moderate to High Implementation Risk</div>
+        </div>
+        <div class="audit-wrong">
+          <div class="audit-wrong-label">What went wrong</div>
+          <div class="audit-wrong-text">Wayground generated biology questions and attached NGSS performance expectation codes with full confidence. Under stress probing, those codes did not map to the content described. The alignment metadata was unsupported at the tagging layer while the underlying biology content was largely accurate. This represents a Layer Divergence Failure: the content layer and the standards layer operated independently, with no mechanism connecting them.</div>
         </div>
         <div class="audit-why">
-          <div class="audit-why-label">Expected deliverable</div>
-          <div class="audit-why-text">Adopt, Conditional, or Do Not Adopt recommendation with documented Risk Dashboard comparison to prior audits.</div>
+          <div class="audit-why-label">Why it matters</div>
+          <div class="audit-why-text">Teachers evaluating AI-generated content rarely cross-check PE codes against actual NGSS documentation. A tool that generates unsupported standards alignment metadata while producing otherwise credible content creates implementation and compliance risk in curriculum planning, procurement review, and reporting contexts.</div>
+        </div>
+        <div class="audit-field">
+          <div class="audit-field-label">CRI</div>
+          <div class="audit-field-value">4.0</div>
+        </div>
+        <div class="audit-field">
+          <div class="audit-field-label">Recommendation</div>
+          <div class="audit-field-value">Conditional</div>
         </div>
       </div>
     </div>
