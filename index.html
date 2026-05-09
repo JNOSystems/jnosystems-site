@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JNO Systems | Independent AI Audits for EdTech</title>
+<meta name="description" content="JNO Systems provides independent AI audits for schools, EdTech companies, and AI teams, identifying hallucination risk, citation failures, science errors, and classroom deployment issues before adoption.">
+<meta property="og:title" content="JNO Systems | Independent AI Audits for EdTech">
+<meta property="og:description" content="Independent AI audits for schools, EdTech teams, and AI products. We identify hidden AI failure modes before students, teachers, or customers rely on them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
@@ -92,9 +95,9 @@
   /* HERO */
   #hero { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; border-bottom: 1px solid rgba(74,158,255,0.08); }
   .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
-  .hero-sub { font-size: 1.2rem; color: var(--muted); margin: 1rem 0 1.75rem; font-weight: 400; line-height: 1.6; max-width: 460px; }
+  .hero-sub { font-size: 1.2rem; color: var(--muted); margin: 1rem 0 1.75rem; font-weight: 400; line-height: 1.6; max-width: 560px; }
   .hero-sub strong { color: var(--white); font-weight: 500; }
-  .hero-proof { margin: 1.75rem 0 2rem; padding: 1rem 1.25rem; background: rgba(255,107,107,0.05); border-left: 3px solid var(--red); max-width: 460px; }
+  .hero-proof { margin: 1.75rem 0 2rem; padding: 1rem 1.25rem; background: rgba(255,107,107,0.05); border-left: 3px solid var(--red); max-width: 560px; }
   .hero-proof-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--red); margin-bottom: 0.4rem; }
   .hero-proof-text { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -103,6 +106,12 @@
   .hstat::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--blue); }
   .hstat-n { font-family: var(--mono); font-size: 1.8rem; font-weight: 700; color: var(--blue); line-height: 1; margin-bottom: 0.35rem; }
   .hstat-l { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+
+  /* AUDIENCE */
+  #audience { background: var(--navy); border-bottom: 1px solid rgba(74,158,255,0.08); }
+  .audience-strip { background: rgba(6,20,40,0.72); border: 1px solid rgba(74,158,255,0.14); padding: 1.3rem 1.5rem; }
+  .audience-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.9rem; margin-top: 1rem; }
+  .audience-item { font-size: 0.88rem; color: var(--white); line-height: 1.35; padding-top: 0.75rem; border-top: 1px solid rgba(74,158,255,0.18); }
 
   /* WHY */
   #why { background: var(--navy-mid); border-bottom: 1px solid rgba(74,158,255,0.08); }
@@ -154,6 +163,9 @@
   .audit-why { padding-top: 0.85rem; border-top: 1px solid rgba(74,158,255,0.1); }
   .audit-why-label { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
   .audit-why-text { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+  .audit-field { padding: 0.7rem 0; border-top: 1px solid rgba(74,158,255,0.08); }
+  .audit-field-label { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.25rem; }
+  .audit-field-value { font-size: 0.9rem; color: var(--white); line-height: 1.5; }
   .audit-card.pending { opacity: 0.6; }
   .audit-card.pending::after { content: 'IN PROGRESS'; position: absolute; top: 1rem; right: 1rem; font-family: var(--mono); font-size: 0.56rem; letter-spacing: 0.14em; color: var(--blue); border: 1px solid rgba(74,158,255,0.3); padding: 0.18rem 0.45rem; }
   .reach-bar { margin-top: 2.5rem; display: flex; align-items: center; gap: 1.75rem; padding: 1.25rem 1.75rem; background: rgba(74,158,255,0.04); border: 1px solid rgba(74,158,255,0.14); flex-wrap: wrap; }
@@ -180,9 +192,20 @@
   .deliv-card h4 { font-family: var(--display); font-size: 0.98rem; font-weight: 700; color: var(--white); margin-bottom: 0.45rem; }
   .deliv-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
 
+  /* FOUNDER */
+  #founder { border-bottom: 1px solid rgba(74,158,255,0.08); }
+  .founder-card { background: var(--navy-card); border: 1px solid rgba(74,158,255,0.14); padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  .founder-card p { font-size: 0.98rem; line-height: 1.75; margin-top: 1rem; }
+  .founder-list { list-style: none; display: grid; gap: 0.75rem; }
+  .founder-list li { font-size: 0.9rem; color: var(--muted); line-height: 1.5; padding: 0.65rem 0; border-bottom: 1px solid rgba(74,158,255,0.08); }
+  .founder-list li:last-child { border-bottom: none; }
+
   /* PRICING */
   #pricing { border-bottom: 1px solid rgba(74,158,255,0.08); }
-  .pricing-context { margin: 1rem 0 3rem; font-size: 1rem; color: var(--muted); max-width: 600px; line-height: 1.7; }
+  .pricing-context { margin: 1rem 0 0; font-size: 1rem; color: var(--muted); max-width: 600px; line-height: 1.7; }
+  .pricing-context + .pricing-context { margin-top: 0.75rem; margin-bottom: 0; }
+  .policy-note { padding: 1rem 1.25rem; background: rgba(74,158,255,0.05); border: 1px solid rgba(74,158,255,0.18); color: var(--white); }
+  .pricing-context + .policy-note { margin-top: 1rem; margin-bottom: 3rem; }
   .pricing-context strong { color: var(--amber); }
   .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: start; }
   .price-card { background: var(--navy-card); border: 1px solid rgba(74,158,255,0.14); padding: 2.25rem 1.75rem; position: relative; transition: border-color 0.2s, transform 0.2s; }
@@ -194,7 +217,7 @@
   .price-desc { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.75rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(74,158,255,0.1); line-height: 1.6; }
   .price-features { list-style: none; margin-bottom: 2rem; }
   .price-features li { font-size: 0.85rem; color: var(--muted); padding: 0.4rem 0; display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.5; }
-  .price-features li::before { content: '—'; color: var(--blue); font-family: var(--mono); font-size: 0.7rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .price-features li::before { content: '-'; color: var(--blue); font-family: var(--mono); font-size: 0.7rem; flex-shrink: 0; margin-top: 0.05rem; }
 
   /* CONTACT */
   #contact { text-align: center; }
@@ -211,11 +234,34 @@
   .foot-r { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; color: rgba(74,158,255,0.4); }
 
   @media (max-width: 860px) {
-    .hero-grid, .why-grid, .panel-grid { grid-template-columns: 1fr; }
+    .hero-grid, .why-grid, .panel-grid, .founder-card { grid-template-columns: 1fr; }
     .hero-stats, .panel-diagram { display: none; }
-    .audits-grid, .steps-grid, .price-grid, .deliv-grid { grid-template-columns: 1fr; }
+    .audits-grid, .steps-grid, .price-grid, .deliv-grid, .audience-grid { grid-template-columns: 1fr; }
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    .container { padding: 0 1.25rem; }
+    .pad { padding: 3rem 0; }
+    #hero { min-height: auto; padding: 7rem 0 3rem; }
+    .hero-sub, .hero-proof { max-width: 100%; }
+    .hero-btns { gap: 0.75rem; }
+    .btn { padding: 0.72rem 1.25rem; }
+    .audience-strip, .dm-box, .audit-card, .step-card, .deliv-card, .founder-card, .price-card { padding: 1.25rem; }
+    .audits-grid, .steps-grid, .price-grid, .deliv-grid { gap: 1rem; margin-top: 2rem; }
+    .why-bullets li, .dm-item, .audit-field, .pq { gap: 0.75rem; }
+    .price-desc, .price-features li, .audit-why-text, .audit-wrong-text, .deliv-card p { line-height: 1.65; }
+    .contact-meta { gap: 1.25rem; }
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 0.85rem 1rem; }
+    .nav-name { font-size: 0.72rem; }
+    .nav-cta { font-size: 0.82rem; padding: 0.45rem 0.75rem; }
+    .hero-btns .btn { width: 100%; text-align: center; }
+    .price-card .btn { width: 100%; }
+    footer { padding: 1.5rem 1rem; }
   }
 </style>
 </head>
@@ -260,16 +306,16 @@
     <div class="hero-grid">
       <div>
         <div class="eyebrow">Independent AI Audits for EdTech</div>
-        <h1>AI tools can give students wrong science — <em>confidently.</em></h1>
-        <p class="hero-sub">We test AI tools <strong>before they reach your classroom.</strong></p>
+        <h1>Independent AI audits for schools, EdTech teams, and AI products.</h1>
+        <p class="hero-sub">AI tools can give students wrong science confidently. JNO Systems tests where tools fail before students, teachers, or customers rely on them.</p>
 
         <div class="hero-proof">
-          <div class="hero-proof-label">Real Example — NotebookLM</div>
-          <div class="hero-proof-text">The tool kept giving confident, sourced-looking answers even after its source material failed. The failure was not obvious in normal classroom review — a credentialed science audit surfaced it.</div>
+          <div class="hero-proof-label">Real Example, NotebookLM</div>
+          <div class="hero-proof-text">The tool produced confident, sourced-looking answers even when the source material did not support the output. The failure was not obvious in normal classroom review. A credentialed science audit surfaced it.</div>
         </div>
 
         <div class="hero-btns">
-          <a href="#contact" class="btn btn-blue">Request an Audit</a>
+          <a href="#contact" class="btn btn-blue">Request Audit Scope</a>
           <a href="#audits"  class="btn btn-outline">See Past Audits</a>
         </div>
       </div>
@@ -281,16 +327,32 @@
         </div>
         <div class="hstat fade" style="transition-delay:0.12s">
           <div class="hstat-n">5</div>
-          <div class="hstat-l">Evaluation layers — every tool checked the same way, every time.</div>
+          <div class="hstat-l">Evaluation layers, with every tool checked the same way every time.</div>
         </div>
         <div class="hstat fade" style="transition-delay:0.19s">
-          <div class="hstat-n">2+1</div>
-          <div class="hstat-l">Two audits published — NotebookLM and MagicSchool AI. Wayground in progress.</div>
+          <div class="hstat-n">2 Published</div>
+          <div class="hstat-l">NotebookLM and MagicSchool AI audits completed, with Wayground in progress.</div>
         </div>
         <div class="hstat fade" style="transition-delay:0.26s">
           <div class="hstat-n">2</div>
-          <div class="hstat-l">Documented failure types — both invisible to standard review.</div>
+          <div class="hstat-l">Documented failure types, both invisible to standard review.</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section id="audience">
+  <div class="container pad">
+    <div class="audience-strip fade">
+      <div class="eyebrow">Built for</div>
+      <div class="audience-grid">
+        <div class="audience-item">Curriculum Directors</div>
+        <div class="audience-item">Technology Directors</div>
+        <div class="audience-item">EdTech Product Teams</div>
+        <div class="audience-item">AI Safety and QA Leads</div>
+        <div class="audience-item">School and District Leadership</div>
       </div>
     </div>
   </div>
@@ -301,13 +363,13 @@
   <div class="container pad">
     <div class="why-grid">
       <div class="why-left fade">
-        <div class="eyebrow">Why districts are requiring independent audits</div>
-        <h2>The problem isn't that AI makes mistakes. It's that you can't see them.</h2>
+        <div class="eyebrow">Why independent AI audits are becoming necessary</div>
+        <h2>The problem is not that AI makes mistakes. It is that many failures are hard to see.</h2>
         <div class="rule"></div>
         <ul class="why-bullets">
           <li>
             <span class="why-icon">01</span>
-            AI tools can generate incorrect content — and present it with complete confidence. There is no error message.
+            AI tools can generate incorrect content and present it with complete confidence. There is no error message.
           </li>
           <li>
             <span class="why-icon">02</span>
@@ -315,11 +377,11 @@
           </li>
           <li>
             <span class="why-icon">03</span>
-            Most problems are discovered after classroom deployment — when the cost is no longer an invoice.
+            Many problems are discovered after classroom deployment, when the cost becomes parent concern, staff confusion, policy cleanup, or public trust.
           </li>
         </ul>
         <div class="why-statement">
-          JNO Systems provides independent, documented evaluation before deployment — so your district can act on evidence, not assurances.
+          JNO Systems provides independent, documented evaluation before adoption, renewal, or deployment, so leaders can act on evidence instead of assurances.
         </div>
       </div>
 
@@ -328,19 +390,19 @@
           <div class="dm-box-title">For CAOs, District Leaders &amp; Funders</div>
           <div class="dm-item">
             <div class="dm-check">&#x2713;</div>
-            <div class="dm-item-text"><strong>Independent validation</strong> — not vendor-provided testing. A credentialed third party with no financial stake in the outcome.</div>
+            <div class="dm-item-text"><strong>Independent validation</strong>, not vendor-provided testing. A credentialed third party with no financial stake in the outcome.</div>
           </div>
           <div class="dm-item">
             <div class="dm-check">&#x2713;</div>
-            <div class="dm-item-text"><strong>Defensible documentation</strong> — executive summary for leadership review and a full audit trail for procurement records.</div>
+            <div class="dm-item-text"><strong>Defensible documentation</strong>, including an executive summary for leadership review and a full audit trail for procurement records.</div>
           </div>
           <div class="dm-item">
             <div class="dm-check">&#x2713;</div>
-            <div class="dm-item-text"><strong>Pre-deployment risk identification</strong> — findings delivered before adoption, not after a parent complaint.</div>
+            <div class="dm-item-text"><strong>Pre-deployment risk identification</strong>, with findings delivered before adoption, not after a parent complaint.</div>
           </div>
           <div class="dm-item">
             <div class="dm-check">&#x2713;</div>
-            <div class="dm-item-text"><strong>Clear adoption recommendation</strong> — every audit concludes with Adopt, Conditional, or Do Not Adopt. No ambiguity.</div>
+            <div class="dm-item-text"><strong>Clear adoption recommendation</strong>, because every audit concludes with Adopt, Conditional, or Do Not Adopt. No ambiguity.</div>
           </div>
         </div>
       </div>
@@ -389,7 +451,7 @@
             <span class="pq-num">01</span>
             <div class="pq-content">
               <h4>Is the science correct?</h4>
-              <p>We check every output against actual curriculum standards. Fluent-sounding answers can contain serious factual errors — we find them.</p>
+              <p>We check every output against actual curriculum standards. Fluent-sounding answers can contain serious factual errors, and we find them.</p>
             </div>
           </div>
           <div class="pq">
@@ -423,7 +485,7 @@
         </div>
 
         <div class="panel-note">
-          <strong>Most AI evaluations test outputs.</strong> JNO Systems tests system behavior across all five layers — because that's where the real failures live.
+          <strong>Most AI evaluations test outputs.</strong> JNO Systems tests system behavior across all five layers, because that is where the real failures live.
         </div>
       </div>
     </div>
@@ -434,55 +496,75 @@
 <section id="audits">
   <div class="container pad">
     <div class="eyebrow">Published Audits</div>
-    <h2>What we found — and why it matters.</h2>
+    <h2>What we found, and why it matters.</h2>
 
     <div class="audits-grid">
       <div class="audit-card fade">
         <div class="audit-status"><span class="dot dot-green"></span> Published</div>
         <div class="audit-name">NotebookLM</div>
         <div class="audit-sub">Google / AI Research Tool</div>
+        <div class="audit-field">
+          <div class="audit-field-label">Primary failure</div>
+          <div class="audit-field-value">False grounding</div>
+        </div>
+        <div class="audit-field">
+          <div class="audit-field-label">Risk</div>
+          <div class="audit-field-value">High</div>
+        </div>
         <div class="audit-wrong">
           <div class="audit-wrong-label">What went wrong</div>
-          <div class="audit-wrong-text">The tool cited sources that didn't actually support what it said — and it did it with full confidence. No warning. No disclaimer.</div>
+          <div class="audit-wrong-text">The tool cited sources that did not actually support what it said, and it did it with full confidence. No warning. No disclaimer.</div>
         </div>
         <div class="audit-why">
           <div class="audit-why-label">Why it matters</div>
-          <div class="audit-why-text">Students and teachers have no way to detect this. It looks exactly like a reliable citation. Standard review missed it entirely.</div>
+          <div class="audit-why-text">Students and teachers have no practical way to detect this during normal use. It looks like a reliable citation even when the support is weak or missing.</div>
         </div>
       </div>
 
       <div class="audit-card fade" style="transition-delay:0.1s">
         <div class="audit-status"><span class="dot dot-green"></span> Published</div>
         <div class="audit-name">MagicSchool AI</div>
-        <div class="audit-sub">AI Teaching Assistant — AP Biology</div>
+        <div class="audit-sub">AI Teaching Assistant, AP Biology</div>
+        <div class="audit-field">
+          <div class="audit-field-label">Primary failure</div>
+          <div class="audit-field-value">Science accuracy failure under correction</div>
+        </div>
+        <div class="audit-field">
+          <div class="audit-field-label">Risk</div>
+          <div class="audit-field-value">Moderate to High</div>
+        </div>
         <div class="audit-wrong">
           <div class="audit-wrong-label">What went wrong</div>
-          <div class="audit-wrong-text">Five documented science errors — including incorrect ATP yield, wrong photosynthesis outputs, and teleological framing of natural selection. When corrected, the tool agreed but kept making the same mistakes.</div>
+          <div class="audit-wrong-text">Five documented science errors appeared across core AP Biology concepts, including ATP yield, photosynthesis outputs, and teleological framing of natural selection. When corrected, the tool agreed but continued producing similar mistakes.</div>
         </div>
         <div class="audit-why">
           <div class="audit-why-label">Why it matters</div>
-          <div class="audit-why-text">These are AP exam concepts. A student relying on this tool would write incorrect answers confidently. CRI score: 2.98.</div>
+          <div class="audit-why-text">These are exam-level concepts. A student relying on the tool could internalize incorrect explanations with confidence. CRI score: 2.98.</div>
         </div>
       </div>
 
       <div class="audit-card pending fade" style="transition-delay:0.2s">
         <div class="audit-status"><span class="dot dot-yellow"></span> In Progress</div>
         <div class="audit-name">Wayground</div>
-        <div class="audit-sub">AI EdTech Platform — Audit 3</div>
+        <div class="audit-sub">AI EdTech Platform, Audit 3</div>
         <div class="audit-wrong">
           <div class="audit-wrong-label">Status</div>
-          <div class="audit-wrong-text">Full five-layer evaluation currently underway. Results will include a complete CRI score and explicit adoption recommendation.</div>
+          <div class="audit-wrong-text">In progress</div>
+        </div>
+        <div class="audit-field">
+          <div class="audit-field-label">Expected finding type</div>
+          <div class="audit-field-value">Full five-layer evaluation with CRI scoring and adoption recommendation.</div>
         </div>
         <div class="audit-why">
           <div class="audit-why-label">Expected deliverable</div>
-          <div class="audit-why-text">Adopt / Conditional / Do Not Adopt recommendation with documented Risk Dashboard comparison to prior audits.</div>
+          <div class="audit-why-text">Adopt, Conditional, or Do Not Adopt recommendation with documented Risk Dashboard comparison to prior audits.</div>
         </div>
       </div>
     </div>
 
     <div class="reach-bar fade">
       <div class="reach-num">14K+</div>
-      <div class="reach-text">These findings were shared widely in active EdTech communities — reaching 14,800+ views and resonating across educators and builders. That's evidence that independent, credentialed evaluation is something the industry has been missing.</div>
+      <div class="reach-text">These findings were shared widely in active EdTech communities, reaching 14,800+ views and resonating across educators and builders. That is evidence that independent, credentialed evaluation is something the industry has been missing.</div>
     </div>
   </div>
 </section>
@@ -497,12 +579,12 @@
       <div class="step-card fade">
         <div class="step-n">01</div>
         <h3>We test the tool like a student would.</h3>
-        <p>Real prompts. Real use cases. We use the tool the way teachers and students actually use it — not the way a vendor demo would show it.</p>
+        <p>Real prompts. Real use cases. We use the tool the way teachers and students actually use it, not the way a vendor demo would show it.</p>
       </div>
       <div class="step-card fade" style="transition-delay:0.1s">
         <div class="step-n">02</div>
         <h3>We try to break it.</h3>
-        <p>We push each of the five evaluation layers — testing for factual errors, citation failures, behavior under correction, and gaps between what's promised and what's real.</p>
+        <p>We push each of the five evaluation layers, testing for factual errors, citation failures, behavior under correction, and gaps between what is promised and what is real.</p>
       </div>
       <div class="step-card fade" style="transition-delay:0.2s">
         <div class="step-n">03</div>
@@ -520,7 +602,7 @@
   <div class="container pad">
     <div class="eyebrow">What You Receive</div>
     <h2>Every audit comes with the same defensible record.</h2>
-    <p class="deliv-intro">No matter the tier, every engagement produces the same six-part deliverable set — designed to be readable by teachers, defensible to leadership, and complete enough for procurement.</p>
+    <p class="deliv-intro">No matter the tier, every engagement produces the same six-part deliverable set, designed to be readable by teachers, defensible to leadership, and complete enough for procurement.</p>
 
     <div class="deliv-grid">
       <div class="deliv-card fade">
@@ -557,16 +639,39 @@
   </div>
 </section>
 
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="container pad">
+    <div class="founder-card fade">
+      <div>
+        <div class="eyebrow">Founder Credibility</div>
+        <h2>Led by Jonathan Norris</h2>
+        <p>JNO Systems is led by Jonathan Norris, an AI model evaluator, former STEM educator, science curriculum designer, and media QA specialist with experience reviewing AI outputs, multimodal systems, instructional content, and real-world failure patterns.</p>
+        <p>This background gives JNO Systems a practical advantage: we evaluate AI tools the way students, teachers, reviewers, and end users actually encounter them.</p>
+      </div>
+      <ul class="founder-list">
+        <li>AI model evaluation and rubric-based QA</li>
+        <li>Former STEM educator in biology, environmental science, physics, and marine biology</li>
+        <li>Media workflow and post-production QA experience</li>
+        <li>Science AI audits focused on accuracy, grounding, transparency, and classroom risk</li>
+        <li>Field observation and multimodal documentation background</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section id="pricing">
   <div class="container pad">
     <div class="eyebrow">Engagement Tiers</div>
-    <h2>Transparent pricing.</h2>
-    <p class="pricing-context"><strong>This is cheaper than fixing a bad rollout.</strong> Most districts discover AI failures after deployment — when the cost is no longer an invoice. It's a parent complaint cycle, a retraction, or a policy emergency.</p>
+    <h2>Clear engagement tiers.</h2>
+    <p class="pricing-context">Each tier is designed to produce defensible documentation before adoption, renewal, or deployment decisions.</p>
+    <p class="pricing-context">The cost of an AI failure is rarely just the software invoice. It can become staff confusion, parent concern, policy cleanup, rework, or lost trust.</p>
+    <p class="pricing-context policy-note">Independent third-party evaluation aligned to the Ohio DEW Model AI Policy Section on evaluating third-party AI tools.</p>
 
     <div class="price-grid">
       <div class="price-card fade">
-        <div class="price-tier">Tier 1 — Entry</div>
+        <div class="price-tier">Tier 1: Entry</div>
         <div class="price-amt">$2,500</div>
         <div class="price-desc">Single-tool audit. For districts evaluating one platform before adoption or renewal.</div>
         <ul class="price-features">
@@ -577,11 +682,11 @@
           <li>Classroom Use Policy language</li>
           <li>One-page executive summary</li>
         </ul>
-        <a href="#contact" class="btn btn-outline" style="display:block;text-align:center;">Get Started</a>
+        <a href="#contact" class="btn btn-outline" style="display:block;text-align:center;">Request Scope</a>
       </div>
 
       <div class="price-card featured fade" style="transition-delay:0.1s">
-        <div class="price-tier">Tier 2 — Standard</div>
+        <div class="price-tier">Tier 2: Standard</div>
         <div class="price-amt">$6,500</div>
         <div class="price-desc">Multi-tool comparative audit. For districts evaluating competing platforms or conducting annual AI policy review.</div>
         <ul class="price-features">
@@ -592,11 +697,11 @@
           <li>Stakeholder briefing document</li>
           <li>30-day follow-up consultation</li>
         </ul>
-        <a href="#contact" class="btn btn-blue" style="display:block;text-align:center;">Get Started</a>
+        <a href="#contact" class="btn btn-blue" style="display:block;text-align:center;">Request Scope</a>
       </div>
 
       <div class="price-card fade" style="transition-delay:0.2s">
-        <div class="price-tier">Tier 3 — Enterprise</div>
+        <div class="price-tier">Tier 3: Enterprise</div>
         <div class="price-amt">$12,500</div>
         <div class="price-desc">Full platform evaluation suite. For publishers, EdTech vendors, or large districts needing comprehensive pre-launch documentation.</div>
         <ul class="price-features">
@@ -607,7 +712,7 @@
           <li>Ongoing monitoring retainer option</li>
           <li>Priority turnaround</li>
         </ul>
-        <a href="#contact" class="btn btn-outline" style="display:block;text-align:center;">Get Started</a>
+        <a href="#contact" class="btn btn-outline" style="display:block;text-align:center;">Request Scope</a>
       </div>
     </div>
   </div>
@@ -617,8 +722,8 @@
 <section id="contact">
   <div class="container pad">
     <div class="eyebrow" style="justify-content:center;">Get in Touch</div>
-    <h2>Talk before you commit.</h2>
-    <p class="contact-sub">We work with Technology Directors, Curriculum Directors, and EdTech publishers. If you're evaluating an AI tool for classroom use and need evidence — not assurances — let's connect.</p>
+    <h2>Start with a fit review.</h2>
+    <p class="contact-sub">We work with Technology Directors, Curriculum Directors, EdTech teams, and AI product teams. If you are evaluating an AI tool and need evidence instead of assurances, start with a short scope review.</p>
     <a href="mailto:jon@jnosystems.com" class="btn btn-blue">jon@jnosystems.com</a>
 
     <div class="contact-meta">
@@ -639,7 +744,7 @@
 </section>
 
 <footer>
-  <div class="foot-l">© 2026 JNO Systems LLC — All rights reserved</div>
+  <div class="foot-l">© 2026 JNO Systems LLC. All rights reserved</div>
   <div class="foot-r">Independent AI Audits for EdTech</div>
 </footer>
 
