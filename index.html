@@ -146,7 +146,13 @@
     color: var(--muted);
   }
 
-  .service-grid,
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.15rem;
+    margin-top: 2.6rem;
+  }
+
   .field-card-grid,
   .case-grid {
     display: grid;
@@ -340,6 +346,10 @@
       <div class="service-card fade" style="transition-delay:0.2s">
         <h3>Field Research Systems</h3>
         <p>Structured observation, multimodal documentation, metadata discipline, and evidence-quality workflows for reviewable field records.</p>
+      </div>
+      <div class="service-card fade" style="transition-delay:0.3s">
+        <h3>Media Systems &amp; Multimodal QA</h3>
+        <p>Review of video, audio, subtitles, metadata, localization files, and cross-modal consistency for production, delivery, and AI evaluation workflows.</p>
       </div>
     </div>
   </div>
