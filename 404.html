@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | JNO Systems</title>
+<meta name="description" content="The requested page could not be found. Return to JNO Systems or review sample audit work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #020d1f;
+    --navy-mid: #061428;
+    --blue: #4a9eff;
+    --blue-lt: #6eb8ff;
+    --white: #e8f0ff;
+    --muted: #7a96b8;
+    --mono: 'IBM Plex Mono', 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+    --body: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html, body { min-height: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  #bg-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  .site-header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    min-height: 74px;
+    padding: 1rem 2.5rem;
+    background: rgba(2, 13, 31, 0.92);
+    border-bottom: 1px solid rgba(74, 158, 255, 0.1);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--blue);
+    text-decoration: none;
+  }
+
+  .brand svg { width: 32px; height: 32px; flex: 0 0 auto; }
+
+  .brand-name {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+    min-height: calc(100vh - 148px);
+    min-height: calc(100svh - 148px);
+    display: grid;
+    place-items: center;
+    padding: 4rem 2rem;
+  }
+
+  .error-panel {
+    width: min(100%, 860px);
+    padding: clamp(2rem, 6vw, 4.5rem);
+    background: rgba(6, 20, 40, 0.86);
+    border: 1px solid rgba(74, 158, 255, 0.16);
+    border-left: 3px solid var(--blue);
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    color: var(--blue);
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 1.25rem;
+    height: 1px;
+    background: var(--blue);
+    flex: 0 0 auto;
+  }
+
+  .error-code {
+    margin: 0 0 0.5rem;
+    color: rgba(74, 158, 255, 0.42);
+    font-family: var(--mono);
+    font-size: clamp(4.5rem, 15vw, 9rem);
+    font-weight: 700;
+    letter-spacing: -0.07em;
+    line-height: 0.85;
+  }
+
+  h1 {
+    max-width: 680px;
+    margin: 0;
+    color: var(--white);
+    font-size: clamp(2.25rem, 6vw, 4.25rem);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 1.02;
+  }
+
+  .message {
+    max-width: 620px;
+    margin: 1.25rem 0 2rem;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+  .button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+  }
+
+  .button-primary { background: var(--blue); color: var(--navy); }
+  .button-primary:hover, .button-primary:focus-visible { background: var(--blue-lt); transform: translateY(-1px); }
+
+  .button-secondary {
+    background: transparent;
+    border: 1px solid rgba(74, 158, 255, 0.3);
+    color: var(--muted);
+  }
+
+  .button-secondary:hover, .button-secondary:focus-visible { border-color: var(--blue); color: var(--blue); }
+  a:focus-visible { outline: 2px solid var(--blue-lt); outline-offset: 4px; }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem 2.5rem;
+    border-top: 1px solid rgba(74, 158, 255, 0.08);
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  .footer-meta {
+    color: rgba(74, 158, 255, 0.4);
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 600px) {
+    .site-header { min-height: 64px; padding: 0.85rem 1rem; }
+    .brand-name { font-size: 0.72rem; }
+    main { min-height: calc(100svh - 138px); padding: 2rem 1rem; }
+    .error-panel { padding: 2rem 1.25rem; }
+    .message { font-size: 1rem; }
+    .actions { gap: 0.75rem; }
+    .button { width: 100%; padding: 0.72rem 1.25rem; text-align: center; }
+    footer { min-height: 74px; padding: 1.25rem 1rem; flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .button { transition: none; }
+  }
+</style>
+</head>
+<body>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <a href="./" class="brand" aria-label="JNO Systems homepage">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="44" stroke="currentColor" stroke-width="2.5"/>
+      <circle cx="50" cy="50" r="6" stroke="currentColor" stroke-width="2"/>
+      <path d="M50 44V16M50 56v28M44 50 20 32m36 18 24-18M44 56 22 70m34-14 22 14" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="50" cy="14" r="4" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="50" cy="86" r="4" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="18" cy="30" r="4" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="82" cy="30" r="4" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="20" cy="72" r="4" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="80" cy="72" r="4" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+    <span class="brand-name">JNO Systems</span>
+  </a>
+</header>
+
+<main>
+  <section class="error-panel" aria-labelledby="page-title">
+    <div class="eyebrow">Navigation exception</div>
+    <p class="error-code" aria-hidden="true">404</p>
+    <h1 id="page-title">This page could not be found.</h1>
+    <p class="message">The address may be outdated or incomplete. Return to the JNO Systems homepage or review published sample audit work.</p>
+    <div class="actions">
+      <a href="./" class="button button-primary">Return to homepage</a>
+      <a href="./#case-studies" class="button button-secondary">View sample audit work</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>&copy; 2026 JNO Systems LLC. All rights reserved.</span>
+  <span class="footer-meta">Independent AI Evaluation &amp; Field Research Systems</span>
+</footer>
+
+<script>
+const canvas = document.getElementById('bg-canvas');
+const context = canvas.getContext('2d');
+let nodes = [];
+let width;
+let height;
+let animationFrame;
+
+function resize() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+}
+
+function initializeNodes(count) {
+  nodes = Array.from({ length: count }, () => ({
+    x: Math.random() * width,
+    y: Math.random() * height,
+    vx: (Math.random() - 0.5) * 0.28,
+    vy: (Math.random() - 0.5) * 0.28,
+    radius: Math.random() * 1.8 + 0.8
+  }));
+}
+
+function draw() {
+  context.clearRect(0, 0, width, height);
+  const connectionDistance = 140;
+
+  for (let i = 0; i < nodes.length; i += 1) {
+    for (let j = i + 1; j < nodes.length; j += 1) {
+      const dx = nodes[i].x - nodes[j].x;
+      const dy = nodes[i].y - nodes[j].y;
+      const distance = Math.hypot(dx, dy);
+
+      if (distance < connectionDistance) {
+        context.beginPath();
+        context.moveTo(nodes[i].x, nodes[i].y);
+        context.lineTo(nodes[j].x, nodes[j].y);
+        context.strokeStyle = `rgba(74,158,255,${(1 - distance / connectionDistance) * 0.45})`;
+        context.lineWidth = 0.6;
+        context.stroke();
+      }
+    }
+  }
+
+  nodes.forEach((node) => {
+    context.beginPath();
+    context.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+    context.fillStyle = 'rgba(74,158,255,0.6)';
+    context.fill();
+  });
+}
+
+function tick() {
+  nodes.forEach((node) => {
+    node.x += node.vx;
+    node.y += node.vy;
+    if (node.x < 0 || node.x > width) node.vx *= -1;
+    if (node.y < 0 || node.y > height) node.vy *= -1;
+  });
+
+  draw();
+  animationFrame = window.requestAnimationFrame(tick);
+}
+
+resize();
+initializeNodes(45);
+
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  tick();
+} else {
+  draw();
+}
+
+window.addEventListener('resize', () => {
+  resize();
+  initializeNodes(45);
+  if (!animationFrame) draw();
+});
+</script>
+</body>
+</html>
